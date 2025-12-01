@@ -1,0 +1,10 @@
+export { Hero } from "./hero";
+export { ServiceCard } from "./service-card";
+export { ServicesGrid } from "./services-grid";
+export { TestimonialCard } from "./testimonial-card";
+export { TestimonialsCarousel } from "./testimonials-carousel";
+export { Testimonials } from "./testimonials";
+export { PricingCard } from "./pricing-card";
+export { PricingPreview } from "./pricing-preview";
+export { CTA } from "./cta";
+export { Footer } from "./footer";
