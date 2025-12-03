@@ -9,7 +9,7 @@ import { useReducedMotion } from "@/lib/hooks";
 export function Hero() {
   const containerRef = useRef<HTMLElement>(null);
   const prefersReducedMotion = useReducedMotion();
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
@@ -22,7 +22,7 @@ export function Hero() {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Gradient Background with Parallax (disabled for reduced motion) */}
+      {/* Fondo con parallax */}
       {prefersReducedMotion ? (
         <div className="absolute inset-0 bg-gradient-to-br from-tekyra-deep to-tekyra-cyan" />
       ) : (
@@ -32,11 +32,20 @@ export function Hero() {
         />
       )}
 
-      {/* Content */}
+      {/* Logo gigante de fondo */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img
+          src="/tekyra-logo.svg"
+          alt="Tekyra Logo"
+          className="w-[650px] h-[650px] opacity-[0.06] object-contain"
+        />
+      </div>
+
+      {/* Contenido */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <FadeUp delay={0.1}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto leading-tight">
-            AI-Powered Digital Solutions For Modern Businesses.
+            Modern Digital Solutions
           </h1>
         </FadeUp>
 
